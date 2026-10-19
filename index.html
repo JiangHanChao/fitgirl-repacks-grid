@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FitGirl 游戏网格</title>
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+<div class="overlay" id="overlay" hidden>
+  <div class="overlay-content" id="overlayContent"></div>
+</div>
+
+<div class="header-wrap">
+  <div class="toolbar">
+    <h1>🎮 FitGirl Repacks</h1>
+    <input id="searchInput" type="search" placeholder="搜索游戏标题、标签…">
+    <button class="btn" id="btnUpdate">🔄 同步最新</button>
+    <button class="btn" id="btnSync">📥 同步历史</button>
+    <button class="btn" id="btnFavorite" title="先收藏几个游戏吧">⭐ 收藏夹</button>
+    <button class="btn" id="btnHidden">🚫 隐藏管理</button>
+    <button class="btn btn-danger" id="btnClearFav" hidden>🗑 清空收藏</button>
+    <button class="btn" id="btnExitFav" hidden>← 退出收藏</button>
+    <span class="badge" id="badge" hidden></span>
+  </div>
+  <div class="statusbar">
+    <span id="stats">正在加载…</span>
+    <span id="syncInfo"></span>
+  </div>
+  <div class="month-nav" id="monthNav"></div>
+  <div class="progressbar" id="progressbar" hidden></div>
+</div>
+
+<div class="grid" id="grid">
+  <div class="empty">正在加载…</div>
+</div>
+
+<div id="loadMoreContainer"></div>
+
+<div class="hover-panel" id="hoverPanel"></div>
+
+<button class="scroll-top" id="btnScrollTop" title="回到顶部" hidden>↑</button>
+
+<div class="modal" id="hiddenModal" hidden>
+  <div class="modal-content">
+    <h2>🚫 隐藏管理</h2>
+    <p id="hiddenCount">当前隐藏：0 个游戏</p>
+    <div class="modal-actions">
+      <button class="btn" id="btnUnhideAll">恢复全部隐藏</button>
+      <button class="btn" id="btnCloseHidden">关闭</button>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
